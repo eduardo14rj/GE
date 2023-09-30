@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #FAFBFF;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", "Lato", sans-serif;
+  color: #061A40;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 28px;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+}
+
+p,
+strong,
+b {
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.color-primary-100 {
+  color: #14e3d9;
+}
+
+.bg-primary-100 {
+  background: #14e3d9;
+}
+
+.color-primary-50 {
+  color: rgba(20, 227, 217, 0.5);
+}
+
+.bg-primary-50 {
+  background: rgba(20, 227, 217, 0.5);
+}
+
+.color-primary-25 {
+  color: rgba(20, 227, 217, 0.25);
+}
+
+.bg-primary-25 {
+  background: rgba(20, 227, 217, 0.25);
+}
+
+.color-secondary-100 {
+  color: #912be3;
+}
+
+.bg-secondary-100 {
+  background: #912be3;
+}
+
+.color-secondary-50 {
+  color: rgba(145, 43, 227, 0.5);
+}
+
+.bg-secondary-50 {
+  background: rgba(145, 43, 227, 0.5);
+}
+
+.color-secondary-25 {
+  color: rgba(145, 43, 227, 0.25);
+}
+
+.bg-secondary-25 {
+  background: rgba(145, 43, 227, 0.25);
+}
+
+.color-dark-light-100 {
+  color: #0d398c;
+}
+
+.bg-dark-light-100 {
+  background: #0d398c;
+}
+
+.color-dark-light-50 {
+  color: rgba(13, 57, 140, 0.5);
+}
+
+.bg-dark-light-50 {
+  background: rgba(13, 57, 140, 0.5);
+}
+
+.color-dark-light-25 {
+  color: rgba(13, 57, 140, 0.25);
+}
+
+.bg-dark-light-25 {
+  background: rgba(13, 57, 140, 0.25);
+}
+
+.color-primary-light-100 {
+  color: #e6f8ff;
+}
+
+.bg-primary-light-100 {
+  background: #e6f8ff;
+}
+
+.color-primary-light-50 {
+  color: rgba(230, 248, 255, 0.5);
+}
+
+.bg-primary-light-50 {
+  background: rgba(230, 248, 255, 0.5);
+}
+
+.color-primary-light-25 {
+  color: rgba(230, 248, 255, 0.25);
+}
+
+.bg-primary-light-25 {
+  background: rgba(230, 248, 255, 0.25);
+}
+
+.color-light-100 {
+  color: #fafbff;
+}
+
+.bg-light-100 {
+  background: #fafbff;
+}
+
+.color-light-50 {
+  color: rgba(250, 251, 255, 0.5);
+}
+
+.bg-light-50 {
+  background: rgba(250, 251, 255, 0.5);
+}
+
+.color-light-25 {
+  color: rgba(250, 251, 255, 0.25);
+}
+
+.bg-light-25 {
+  background: rgba(250, 251, 255, 0.25);
+}
+
+.color-dark-100 {
+  color: #061a40;
+}
+
+.bg-dark-100 {
+  background: #061a40;
+}
+
+.color-dark-50 {
+  color: rgba(6, 26, 64, 0.5);
+}
+
+.bg-dark-50 {
+  background: rgba(6, 26, 64, 0.5);
+}
+
+.color-dark-25 {
+  color: rgba(6, 26, 64, 0.25);
+}
+
+.bg-dark-25 {
+  background: rgba(6, 26, 64, 0.25);
+}
+
+.color-success-100 {
+  color: #4fe887;
+}
+
+.bg-success-100 {
+  background: #4fe887;
+}
+
+.color-success-50 {
+  color: rgba(79, 232, 135, 0.5);
+}
+
+.bg-success-50 {
+  background: rgba(79, 232, 135, 0.5);
+}
+
+.color-success-25 {
+  color: rgba(79, 232, 135, 0.25);
+}
+
+.bg-success-25 {
+  background: rgba(79, 232, 135, 0.25);
+}
+
+.color-danger-100 {
+  color: #e35b14;
+}
+
+.bg-danger-100 {
+  background: #e35b14;
+}
+
+.color-danger-50 {
+  color: rgba(227, 91, 20, 0.5);
+}
+
+.bg-danger-50 {
+  background: rgba(227, 91, 20, 0.5);
+}
+
+.color-danger-25 {
+  color: rgba(227, 91, 20, 0.25);
+}
+
+.bg-danger-25 {
+  background: rgba(227, 91, 20, 0.25);
+}
+
+.color-warning-100 {
+  color: #ffd930;
+}
+
+.bg-warning-100 {
+  background: #ffd930;
+}
+
+.color-warning-50 {
+  color: rgba(255, 217, 48, 0.5);
+}
+
+.bg-warning-50 {
+  background: rgba(255, 217, 48, 0.5);
+}
+
+.color-warning-25 {
+  color: rgba(255, 217, 48, 0.25);
+}
+
+.bg-warning-25 {
+  background: rgba(255, 217, 48, 0.25);
+}
+
+.color-info-100 {
+  color: #5ae8df;
+}
+
+.bg-info-100 {
+  background: #5ae8df;
+}
+
+.color-info-50 {
+  color: rgba(90, 232, 223, 0.5);
+}
+
+.bg-info-50 {
+  background: rgba(90, 232, 223, 0.5);
+}
+
+.color-info-25 {
+  color: rgba(90, 232, 223, 0.25);
+}
+
+.bg-info-25 {
+  background: rgba(90, 232, 223, 0.25);
+}
+
+.lg-primary-to-secondary {
+  background: linear-gradient(to right, #14E3D9, #912BE3);
+}/*# sourceMappingURL=index.css.map */

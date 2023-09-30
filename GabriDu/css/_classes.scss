@@ -1,0 +1,17 @@
+@import './colors';
+
+@each $color-name, $color-value in $colors {
+    @each $opacity-value, $opacity-level in $opacity {
+      .color-#{$color-name}-#{$opacity-value} {
+        color: rgba($color-value, $opacity-level);
+      }
+
+      .bg-#{$color-name}-#{$opacity-value} {
+        background: rgba($color-value, $opacity-level);
+      }
+    }
+  }
+
+  .lg-primary-to-secondary {
+    background: linear-gradient(to right, map-get($colors, primary), map-get($colors, secondary));
+  }

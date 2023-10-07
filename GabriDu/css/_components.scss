@@ -1,0 +1,32 @@
+@import './config';
+
+.switch {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    padding: 6px;
+    position: relative;
+
+    .switch-ball {
+        position: absolute;
+        width: 24px + 8px;
+        height: 24px + 8px;
+        transform: translate(-4px, -4px);
+        z-index: -1;
+        background: map-get($colors, primary);
+        border-radius: 100%;
+    }
+
+    &.isDark {
+        .switch-ball {
+            left: 38px;
+        }
+    }
+
+    &.isAuto {
+        .switch-ball {
+            left: unset;
+            right: -2px;
+        }
+    }
+}

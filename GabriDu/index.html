@@ -8,36 +8,52 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body>
-    <header>
-        <img src="./img/logo light.svg" alt="Logo">
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Sobre">Sobre a GE</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Galerias">Galerias</a></li>
-            </ul>
-        </nav>
+<body class="container">
+    <header class="bg-primary-light-50">
+        <div class="container">
+            <img src="./img/logo light.svg" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Sobre">Sobre a GE</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Galerias">Galerias</a></li>
+                    <div class="switch isAuto">
+                        <div class="light_btn">
+                            <img src="./img/icons/light mode.svg" alt="tema claro">
+                        </div>
+                        <div class="switch-ball"></div>
+                        <div class="dark_btn">
+                            <img src="./img/icons/dark mode.svg" alt="tema escuro">
+                        </div>
+                        <div class="auto_btn">
+                            <img src="./img/icons/auto mode.svg" alt="tema automático">
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-
         <section id="Home">
-                    <h1>Cabeçalho1</h1>
-                    <h2>Cabeçalho2</h2>
-                    <h3>Cabeçalho3</h3>
-                    <h4>Cabeçalho4</h4>
-                    <h5>Cabeçalho5</h5>
-                    <h6>Cabeçalho6</h6>
-<div style="height: 100px;" class="lg-primary-to-secondary">
-
-</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ullam possimus illum dignissimos quo natus amet, dolorem, qui, laborum quasi corporis ratione distinctio? Eaque dolorum iste perferendis quae eos possimus sequi doloremque.</p>
+            <h1>Cabeçalho1</h1>
+            <h2>Cabeçalho2</h2>
+            <h3>Cabeçalho3</h3>
+            <h4 class="p-3">Cabeçalho4</h4>
+            <h5>Cabeçalho5</h5>
+            <h6>Cabeçalho6</h6>
+            <div style="height: 100px;" class="lg-primary-to-secondary">
+                <p class="color-light-100 fw-bold mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+                    ullam possimus illum dignissimos quo natus amet, dolorem, qui, laborum quasi corporis ratione
+                    distinctio? Eaque dolorum iste perferendis quae eos possimus sequi doloremque.
+                </p>
+            </div>
         </section>
-
     </main>
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/theme.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
-@import './colors';
-
+@import './config';
+@import './utils';
 @each $color-name, $color-value in $colors {
     @each $opacity-value, $opacity-level in $opacity {
       .color-#{$color-name}-#{$opacity-value} {
@@ -12,6 +12,32 @@
     }
   }
 
+  .fw-bold {
+    font-weight: bold !important;
+  }
+
   .lg-primary-to-secondary {
     background: linear-gradient(to right, map-get($colors, primary), map-get($colors, secondary));
+    @include apply-dark-style(){
+    background: #999;
+    }
   }
+
+  @each $space-name, $space-value in $spacing {
+    .m-#{$space-name} {
+      margin: $space-value;
+    }
+    .p-#{$space-name} {
+      padding: $space-value;
+    }
+
+    @each $position-name, $position-value in $positions {
+      .p#{$position-value}-#{$space-name} {
+        padding-#{$position-name}: $space-value; 
+      }
+      .m#{$position-value}-#{$space-name} {
+        margin-#{$position-name}: $space-value; 
+      }
+    }
+  }
+  

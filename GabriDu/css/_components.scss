@@ -30,3 +30,37 @@
         }
     }
 }
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    background: map-get($colors, primary-light);
+    height: $navbar-height;
+
+    @include apply-dark-style() {
+        background: map-get($colors, dark);
+    }
+
+    .container {
+        display: flex;
+        height: $navbar-height;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding-bottom: 0px;
+
+            li {
+                a {
+                    color: map-get($colors, dark);
+                    @include apply-dark-style() {
+                        color: map-get($colors, light);
+                    }
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

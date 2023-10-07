@@ -7,7 +7,6 @@
 }
 
 body {
-  background: #FAFBFF;
   font-size: 16px;
   background: #E6F8FF;
 }
@@ -66,6 +65,7 @@ h6 {
 }
 
 p,
+a,
 strong,
 b {
   font-family: "Lato", sans-serif;
@@ -74,6 +74,10 @@ b {
 p {
   font-size: 18px;
   line-height: 22px;
+}
+
+a {
+  font-weight: bold;
 }
 
 .color-primary-100 {
@@ -549,4 +553,32 @@ body.dark .lg-primary-to-secondary {
 .switch.isAuto .switch-ball {
   left: unset;
   right: -2px;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  background: #E6F8FF;
+  height: 64px;
+}
+body.dark #navbar {
+  background: #061A40;
+}
+#navbar .container {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar .container ul {
+  display: flex;
+  list-style: none;
+  padding-bottom: 0px;
+}
+#navbar .container ul li a {
+  color: #061A40;
+  text-decoration: none;
+}
+body.dark #navbar .container ul li a {
+  color: #FAFBFF;
 }/*# sourceMappingURL=index.css.map */

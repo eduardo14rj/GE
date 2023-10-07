@@ -10,7 +10,6 @@
 }
 
 body {
-    background: map-get($colors, light);
     font-size: 16px;
     background: map-get($colors, primary-light);
 
@@ -68,6 +67,7 @@ h6 {
 }
 
 p,
+a,
 strong,
 b {
     font-family: "Lato", sans-serif;
@@ -76,6 +76,10 @@ b {
 p {
     font-size: 18px;
     line-height: 22px;
+}
+
+a {
+    font-weight: bold;
 }
 
 //

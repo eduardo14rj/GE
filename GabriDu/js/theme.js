@@ -1,37 +1,48 @@
 
 function ThemeInit() {
     var theme = localStorage.getItem("theme");
+    var body = document.querySelector("body");
+    var ball = document.querySelector("[switch-ball]")
 
     function ObserverTheme() {
         if (theme == undefined) {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                changeThemeDark(false);
+                changeThemeDark();
             } else {
-                changeThemeLight(false);
+                changeThemeLight();
             }
+            setBallClass("auto");
         } else {
             if (theme == "dark") changeThemeDark()
             if (theme == "light") changeThemeLight()
         }
     }
+
     ObserverTheme();
 
     function changeThemeDark(save) {
-        var body = document.querySelector("body");
         body.classList.add("dark");
+        setBallClass("dark")
         if (save) localStorage.setItem("theme", "dark")
         setTimeout(() => body.style.transition = "all .3s ease", 800)
     }
+
     function changeThemeLight(save) {
-        var body = document.querySelector("body");
         body.classList.remove("dark");
+        setBallClass("light")
         if (save) localStorage.setItem("theme", "light")
         setTimeout(() => body.style.transition = "all .3s ease", 800);
     }
 
     function changeThemeAuto() {
-        localStorage.removeItem("theme")
         ObserverTheme();
+        localStorage.removeItem("theme")
+        setBallClass("auto")
+    }
+
+    function setBallClass(classe) {
+        ball.classList.remove.apply(ball.classList, Array.from(ball.classList));
+        ball.classList.add(classe);
     }
 
     var lightBtn = document.querySelector(".light_btn");

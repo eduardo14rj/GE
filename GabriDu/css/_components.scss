@@ -1,44 +1,64 @@
 @import './config';
 
+
+//SWITCH DE TEMA
 .switch {
     display: flex;
     width: 100px;
     justify-content: space-between;
     padding: 6px;
+    align-items: center;
     position: relative;
 
-    .switch-ball {
+    [switch-ball] {
+        transition: $transition;
         position: absolute;
         width: 24px + 8px;
         height: 24px + 8px;
-        transform: translate(-4px, -4px);
+        transform: translate(-4px, calc(-50% - 2px));
         z-index: -1;
         background: map-get($colors, primary);
         border-radius: 100%;
-    }
+        top: 50%;
 
-    &.isDark {
-        .switch-ball {
-            left: 38px;
+        &.light {
+            left: 6px !important;
+        }
+
+        &.dark {
+            left: 38px !important;
+        }
+
+        &.auto {
+            left: calc(100% - 30px) !important;
         }
     }
 
-    &.isAuto {
-        .switch-ball {
-            left: unset;
-            right: -2px;
-        }
+    .light_btn,
+    .dark_btn,
+    .auto_btn {
+        cursor: pointer;   
+            color: map-get($colors, dark);
+            @include apply-dark-style() {
+                color: map-get($colors, light) !important;
+            }
+        
     }
 }
 
+//
+
+
+//NAVBAR
 #navbar {
     position: fixed;
     width: 100%;
-    background: map-get($colors, primary-light);
+    background: opacity(primary-light, 50);
+    backdrop-filter: blur(6px);
     height: $navbar-height;
 
     @include apply-dark-style() {
-        background: map-get($colors, dark);
+        background: opacity(dark, 50);
     }
 
     .container {
@@ -46,21 +66,45 @@
         height: $navbar-height;
         align-items: center;
         justify-content: space-between;
-
+        @include container();
+        
+        .logo {
+            background-image: url('./../img/logo light.svg');
+            @include apply-dark-style(){
+            background-image: url('./../img/logo dark.svg');
+            }
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% 100%;
+            width: 100px;
+            height: 32px;
+        }
+        
         ul {
             display: flex;
             list-style: none;
             padding-bottom: 0px;
 
             li {
+                display: block;
+                height: $navbar-height;
+                line-height: $navbar-height;
+                padding: 0 20px;
                 a {
+                    transition: $transition;
                     color: map-get($colors, dark);
+                    display: block;
                     @include apply-dark-style() {
                         color: map-get($colors, light);
                     }
                     text-decoration: none;
+                    &:hover {
+                        color: map-get($colors, primary) !important;
+                    }
                 }
             }
         }
     }
 }
+
+//

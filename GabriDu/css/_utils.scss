@@ -10,6 +10,16 @@
     }
 }
 
+@mixin container(){
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 map-get($spacing, 2);
+}
+
+@function opacity($color, $opacitySet) {
+    @return rgba(map-get($colors, $color), map-get($opacity, $opacitySet));
+}
+
 @mixin apply-dark-style($isBody: false) {
     @if $isBody == false {
         body.dark & {

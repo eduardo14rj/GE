@@ -536,49 +536,92 @@ body.dark .lg-primary-to-secondary {
   width: 100px;
   justify-content: space-between;
   padding: 6px;
+  align-items: center;
   position: relative;
 }
-.switch .switch-ball {
+.switch [switch-ball] {
+  transition: 0.3s ease;
   position: absolute;
   width: 32px;
   height: 32px;
-  transform: translate(-4px, -4px);
+  transform: translate(-4px, calc(-50% - 2px));
   z-index: -1;
   background: #14E3D9;
   border-radius: 100%;
+  top: 50%;
 }
-.switch.isDark .switch-ball {
-  left: 38px;
+.switch [switch-ball].light {
+  left: 6px !important;
 }
-.switch.isAuto .switch-ball {
-  left: unset;
-  right: -2px;
+.switch [switch-ball].dark {
+  left: 38px !important;
+}
+.switch [switch-ball].auto {
+  left: calc(100% - 30px) !important;
+}
+.switch .light_btn,
+.switch .dark_btn,
+.switch .auto_btn {
+  cursor: pointer;
+  color: #061A40;
+}
+body.dark .switch .light_btn,
+body.dark .switch .dark_btn,
+body.dark .switch .auto_btn {
+  color: #FAFBFF !important;
 }
 
 #navbar {
   position: fixed;
   width: 100%;
-  background: #E6F8FF;
+  background: rgba(230, 248, 255, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   height: 64px;
 }
 body.dark #navbar {
-  background: #061A40;
+  background: rgba(6, 26, 64, 0.5);
 }
 #navbar .container {
   display: flex;
   height: 64px;
   align-items: center;
   justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.8rem;
+}
+#navbar .container .logo {
+  background-image: url("./../img/logo light.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 100%;
+  width: 100px;
+  height: 32px;
+}
+body.dark #navbar .container .logo {
+  background-image: url("./../img/logo dark.svg");
 }
 #navbar .container ul {
   display: flex;
   list-style: none;
   padding-bottom: 0px;
 }
+#navbar .container ul li {
+  display: block;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 20px;
+}
 #navbar .container ul li a {
+  transition: 0.3s ease;
   color: #061A40;
+  display: block;
   text-decoration: none;
 }
 body.dark #navbar .container ul li a {
   color: #FAFBFF;
+}
+#navbar .container ul li a:hover {
+  color: #14E3D9 !important;
 }/*# sourceMappingURL=index.css.map */

@@ -1,10 +1,10 @@
 
 function ThemeInit() {
-    var theme = localStorage.getItem("theme");
     var body = document.querySelector("body");
     var ball = document.querySelector("[switch-ball]")
-
+    
     function ObserverTheme() {
+        var theme = localStorage.getItem("theme");
         if (theme == undefined) {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 changeThemeDark();
@@ -35,8 +35,8 @@ function ThemeInit() {
     }
 
     function changeThemeAuto() {
-        ObserverTheme();
         localStorage.removeItem("theme")
+        ObserverTheme();
         setBallClass("auto")
     }
 

@@ -37,18 +37,20 @@
     .light_btn,
     .dark_btn,
     .auto_btn {
-        cursor: pointer;   
+        cursor: pointer;
+
+        span {
             color: map-get($colors, dark);
+
             @include apply-dark-style() {
                 color: map-get($colors, light) !important;
             }
-        
+        }
+
     }
 }
 
 //
-
-
 //NAVBAR
 #navbar {
     position: fixed;
@@ -67,19 +69,21 @@
         align-items: center;
         justify-content: space-between;
         @include container();
-        
+
         .logo {
             background-image: url('./../img/logo light.svg');
-            @include apply-dark-style(){
-            background-image: url('./../img/logo dark.svg');
+
+            @include apply-dark-style() {
+                background-image: url('./../img/logo dark.svg');
             }
+
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 50% 100%;
             width: 100px;
             height: 32px;
         }
-        
+
         ul {
             display: flex;
             list-style: none;
@@ -90,14 +94,18 @@
                 height: $navbar-height;
                 line-height: $navbar-height;
                 padding: 0 20px;
+
                 a {
                     transition: $transition;
                     color: map-get($colors, dark);
                     display: block;
+
                     @include apply-dark-style() {
                         color: map-get($colors, light);
                     }
+
                     text-decoration: none;
+
                     &:hover {
                         color: map-get($colors, primary) !important;
                     }
@@ -106,4 +114,15 @@
         }
     }
 }
-//
+
+
+
+
+
+//SECTIONS
+//HOME  
+#Home {
+    p {
+        font-size: 1.32rem !important;
+    }
+}

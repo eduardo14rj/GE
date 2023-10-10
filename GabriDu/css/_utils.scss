@@ -1,11 +1,10 @@
-@mixin container($spaceX: 0) {
-    width: 1280px;
-    margin: 0 auto;
-    padding: 0 $spaceX;
-}
-
 @mixin mobile() {
     @media screen and (max-width: 762px) {
+        @content;
+    }
+}
+@mixin web(){
+    @media (min-width: 762px) {
         @content;
     }
 }

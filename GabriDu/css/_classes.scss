@@ -1,43 +1,121 @@
 @import './config';
 @import './utils';
+
 @each $color-name, $color-value in $colors {
-    @each $opacity-value, $opacity-level in $opacity {
-      .color-#{$color-name}-#{$opacity-value} {
+
+  .btn-#{$color-name} {
+    background: $color-value;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: map-get($colors, dark);
+    &.big {
+      padding: 16px 32px;
+      font-size: 1.24rem;
+    }
+  }
+  
+  @each $opacity-value, $opacity-level in $opacity {
+    .color-#{$color-name}-#{$opacity-value} {
+      color: rgba($color-value, $opacity-level);
+    }
+
+    .bg-#{$color-name}-#{$opacity-value} {
+      background: rgba($color-value, $opacity-level);
+    }
+
+    .dark\:color-#{$color-name}-#{$opacity-value} {
+      @include apply-dark-style() {
         color: rgba($color-value, $opacity-level);
       }
+    }
 
-      .bg-#{$color-name}-#{$opacity-value} {
+    .dark\:bg-#{$color-name}-#{$opacity-value} {
+      @include apply-dark-style() {
         background: rgba($color-value, $opacity-level);
       }
     }
   }
+}
 
-  .fw-bold {
-    font-weight: bold !important;
+
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
+.lg-primary-to-secondary {
+  background: linear-gradient(to right, map-get($colors, primary), map-get($colors, secondary));
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($max-columns, 1fr);
+  grid-gap: 12px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.container {
+  @include container();
+}
+
+@each $cols-value in $cols {
+  .col-#{$cols-value} {
+    grid-column: span $cols-value !important;
   }
 
-  .lg-primary-to-secondary {
-    background: linear-gradient(to right, map-get($colors, primary), map-get($colors, secondary));
-    @include apply-dark-style(){
-    background: #999;
+  @include web() {
+    .col-md-#{$cols-value} {
+      grid-column: span $cols-value !important;
     }
   }
+}
 
-  @each $space-name, $space-value in $spacing {
-    .m-#{$space-name} {
-      margin: $space-value;
-    }
-    .p-#{$space-name} {
-      padding: $space-value;
+
+@each $space-name, $space-value in $spacing {
+  .m-#{$space-name} {
+    margin: $space-value;
+  }
+
+  .p-#{$space-name} {
+    padding: $space-value;
+  }
+
+  @each $position-name, $position-value in $positions {
+    .p#{$position-value}-#{$space-name} {
+      padding-#{$position-name}: $space-value;
     }
 
-    @each $position-name, $position-value in $positions {
-      .p#{$position-value}-#{$space-name} {
-        padding-#{$position-name}: $space-value; 
-      }
-      .m#{$position-value}-#{$space-name} {
-        margin-#{$position-name}: $space-value; 
-      }
+    .m#{$position-value}-#{$space-name} {
+      margin-#{$position-name}: $space-value;
     }
   }
-  
+}
+
+
+@each $colors-name, $colors-value in $colors {
+  @each $opacity-name, $opacity-value in $opacity {
+    .ball-#{$colors-name}-#{$opacity-name} {
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      background: rgba($colors-value, $opacity-value);
+      filter: blur(64px);
+    }
+  }
+}

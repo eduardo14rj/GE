@@ -13,9 +13,9 @@ Além disso, torna-se fácil o entendimento não apenas do grupo de programadore
 Abaixo, é explicado o que é cada documento **.css** ou **.scss** dentro da pasta styles.
 
 ### index.scss
->Documento que contém todas as importações dos outros documentos .scss e com isso, gerar um documento único **index.css** para ser chamado pelos documentos **.html**.
+>Documento que contém todas as importações de outros documentos .scss, com o objetivo de gerar um documento único **index.css**, sendo chamado pelos documentos **.html**.
 >
->Para isso, é necessário instalar um extensor que possibilite a compilação e da geração do documento .css único, utilizamos o [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
+>Para isso, é necessário instalar um extensor que possibilite a compilação e da geração do documento **.css** único, utilizamos o [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
 para isso.
 
 ```html
@@ -23,7 +23,26 @@ para isso.
 ```
 
 ### _config.scss
+>Documento que tem a utilidade de armazenar variáveis, como cores, colunas, valores de espaçamentos e outras variáveis. 
+```scss
+    $colors: (
+    primary: #14E3D9,
+    secondary: #912BE3,
+    ...
+    );
+    $opacity: (
+        100: 1,
+        50: .5,
+        25: .25
+    );
+```
+>E para utilizar essas variáveis dentro de **_config.css**, é necessário importar o documento no documento **.scss** desejado.
+
+```scss
+    @import './config';
+```
+### _system.scss
+>Documento que define as estilizações principais dos elementos HTML, como definições de fontes, tamanhos e cores bases dos elementos, baseados no **Design System** do projeto.
+
 
 ### _utils.scss
-
-### _system.scss

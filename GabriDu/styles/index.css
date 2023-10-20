@@ -1258,48 +1258,65 @@ body.dark .dark\:bg-info-25 {
   filter: blur(64px);
 }
 
-.switch {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-  padding: 6px;
-  align-items: center;
+.switch-container {
   position: relative;
+  height: 64px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-.switch [switch-ball] {
+.switch-container .switch-actived {
+  cursor: pointer;
+  padding: 8px 12px;
+  display: flex;
+  border: 1px;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.switch-container .switch-dropdown {
+  pointer-events: none !important;
+  width: 200px;
   transition: 0.3s ease;
   position: absolute;
-  width: 32px;
-  height: 32px;
-  transform: translate(-4px, calc(-50% - 2px));
+  top: 64px;
+  overflow: hidden;
+  height: 0px !important;
+  gap: 8px;
   z-index: -1;
-  background: #14E3D9;
-  border-radius: 100%;
-  top: 50%;
 }
-.switch [switch-ball].light {
-  left: 6px !important;
+.switch-container .switch-dropdown.active {
+  transition: 0.3s ease;
+  height: 120px !important;
+  pointer-events: visible !important;
+  top: 64px;
 }
-.switch [switch-ball].dark {
-  left: 38px !important;
-}
-.switch [switch-ball].auto {
-  left: calc(100% - 30px) !important;
-}
-.switch .light_btn,
-.switch .dark_btn,
-.switch .auto_btn {
+.switch-container .switch-dropdown button {
   cursor: pointer;
+  padding: 8px 12px;
+  width: 100%;
+  display: flex;
+  border: 1px;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
 }
-.switch .light_btn span,
-.switch .dark_btn span,
-.switch .auto_btn span {
-  color: #061A40;
+body.dark .switch-container .switch-dropdown button {
+  background: #14E3D9 !important;
+  color: #061A40 !important;
 }
-body.dark .switch .light_btn span,
-body.dark .switch .dark_btn span,
-body.dark .switch .auto_btn span {
-  color: #FAFBFF !important;
+.switch-container .switch-dropdown button:nth-child(1) {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.switch-container .switch-dropdown button:nth-child(2) {
+  border-radius: 0 !important;
+}
+.switch-container .switch-dropdown button:nth-child(3) {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 #navbar {

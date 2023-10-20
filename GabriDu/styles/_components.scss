@@ -2,51 +2,121 @@
 
 
 //SWITCH DE TEMA
-.switch {
-    display: flex;
-    width: 100px;
-    justify-content: space-between;
-    padding: 6px;
-    align-items: center;
+// .switch {
+//     display: flex;
+//     width: 100px;
+//     justify-content: space-between;
+//     padding: 6px;
+//     align-items: center;
+//     position: relative;
+
+//     [switch-ball] {
+//         transition: $transition;
+//         position: absolute;
+//         width: 24px + 8px;
+//         height: 24px + 8px;
+//         transform: translate(-4px, calc(-50% - 2px));
+//         z-index: -1;
+//         background: map-get($colors, primary);
+//         border-radius: 100%;
+//         top: 50%;
+
+//         &.light {
+//             left: 6px !important;
+//         }
+
+//         &.dark {
+//             left: 38px !important;
+//         }
+
+//         &.auto {
+//             left: calc(100% - 30px) !important;
+//         }
+//     }
+
+//     .light_btn,
+//     .dark_btn,
+//     .auto_btn {
+//         cursor: pointer;
+
+//         span {
+//             color: map-get($colors, dark);
+
+//             @include apply-dark-style() {
+//                 color: map-get($colors, light) !important;
+//             }
+//         }
+
+//     }
+// }
+
+.switch-container {
     position: relative;
+    height: $navbar-height;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 
-    [switch-ball] {
-        transition: $transition;
-        position: absolute;
-        width: 24px + 8px;
-        height: 24px + 8px;
-        transform: translate(-4px, calc(-50% - 2px));
-        z-index: -1;
-        background: map-get($colors, primary);
-        border-radius: 100%;
-        top: 50%;
 
-        &.light {
-            left: 6px !important;
-        }
+    .switch-actived {
+        cursor: pointer;
+        padding: 8px 12px;
+        display: flex;
+        border: 1px;
+        background: #fff;
 
-        &.dark {
-            left: 38px !important;
-        }
-
-        &.auto {
-            left: calc(100% - 30px) !important;
-        }
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
     }
 
-    .light_btn,
-    .dark_btn,
-    .auto_btn {
-        cursor: pointer;
+    .switch-dropdown {
+        pointer-events: none !important;
+        width: 200px;
+        transition: $transition;
+        position: absolute;
+        top: $navbar-height;
+        overflow: hidden;
+        height: 0px !important;
+        gap: 8px;
+        z-index: -1;
 
-        span {
-            color: map-get($colors, dark);
-
-            @include apply-dark-style() {
-                color: map-get($colors, light) !important;
-            }
+        &.active {
+            transition: $transition;
+            height: 120px !important;
+            pointer-events: visible !important;
+            top: $navbar-height;
         }
 
+        button {
+            cursor: pointer;
+            padding: 8px 12px;
+            width: 100%;
+            display: flex;
+            @include apply-dark-style() {
+                background: map-get($colors, primary) !important;
+                color: map-get($colors, dark) !important;
+            }
+            border: 1px;
+            background: #fff;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 12px;
+
+            &:nth-child(1) {
+                border-bottom-left-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0 !important;
+            }
+
+            &:nth-child(3) {
+                border-top-left-radius: 0px !important;
+                border-top-right-radius: 0px !important;
+            }
+        }
     }
 }
 

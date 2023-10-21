@@ -11,9 +11,17 @@
     box-sizing: border-box;
 }
 
+html,body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
 body {
     font-size: 16px;
     background: map-get($colors, primary-light);
+
     @include apply-dark-style(true) {
         background: map-get($colors, dark);
     }
@@ -29,6 +37,7 @@ h5,
 h6,
 label,
 a,
+button,
 span {
     font-family: "Inter", "Lato", sans-serif;
 }
@@ -63,6 +72,10 @@ h6 {
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
+}
+
+button {
+    font-weight: bold;
 }
 
 p,

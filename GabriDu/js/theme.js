@@ -1,61 +1,3 @@
-
-// function ThemeInit() {
-//     var body = document.querySelector("body");
-//     var ball = document.querySelector("[switch-ball]")
-
-//     function ObserverTheme() {
-//         var theme = localStorage.getItem("theme");
-//         if (theme == undefined) {
-//             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//                 changeThemeDark();
-//             } else {
-//                 changeThemeLight();
-//             }
-//             setBallClass("auto");
-//         } else {
-//             if (theme == "dark") changeThemeDark()
-//             if (theme == "light") changeThemeLight()
-//         }
-//     }
-
-//     ObserverTheme();
-
-//     function changeThemeDark(save) {
-//         body.classList.add("dark");
-//         setBallClass("dark")
-//         if (save) localStorage.setItem("theme", "dark")
-//         setTimeout(() => body.style.transition = "all .3s ease", 800)
-//     }
-
-//     function changeThemeLight(save) {
-//         body.classList.remove("dark");
-//         setBallClass("light")
-//         if (save) localStorage.setItem("theme", "light")
-//         setTimeout(() => body.style.transition = "all .3s ease", 800);
-//     }
-
-//     function changeThemeAuto() {
-//         localStorage.removeItem("theme")
-//         ObserverTheme();
-//         setBallClass("auto")
-//     }
-
-//     function setBallClass(classe) {
-//         ball.classList.remove.apply(ball.classList, Array.from(ball.classList));
-//         ball.classList.add(classe);
-//     }
-
-//     var lightBtn = document.querySelector(".light_btn");
-//     var darkBtn = document.querySelector(".dark_btn");
-//     var autokBtn = document.querySelector(".auto_btn");
-
-//     lightBtn.addEventListener("click", changeThemeLight);
-//     darkBtn.addEventListener("click", changeThemeDark);
-//     autokBtn.addEventListener("click", changeThemeAuto);
-// }
-
-// ThemeInit();
-
 function ThemeInit() {
     var body = document.querySelector("body");
     var switchActived = document.querySelector(".switch-actived");
@@ -69,51 +11,83 @@ function ThemeInit() {
         var theme = localStorage.getItem("theme");
         if (theme == undefined) {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                changeThemeDark();
+                changeThemeDark(false);
             } else {
-                changeThemeLight();
+                changeThemeLight(false);
             }
         } else {
             if (theme == "dark") changeThemeDark()
             if (theme == "light") changeThemeLight()
         }
     }
-    ObserverTheme();
 
-    function setActive(theme) {
+
+    function setActive(theme, save = true) {
         var span = switchActived.querySelector(".material-symbols-outlined");
+        if (save) {
+            switch (theme) {
+                case "light":
+                    span.textContent = "light_mode";
+                    break;
+                case "dark":
+                    span.textContent = "dark_mode";
+                    break;
+                default:
+                    span.textContent = "tonality";
+                    break;
+            }
+        }
+    }
+
+    function switchsetActive(theme) {
         switch (theme) {
-            case "light":
-                span.textContent = "light_mode";
-                break;
             case "dark":
-                span.textContent = "dark_mode";
+                btn_switch_auto.classList.remove("active");
+                btn_switch_light.classList.remove("active");
+                btn_switch_dark.classList.add("active");
                 break;
-            default:
-                span.textContent = "tonality";
+            case "light":
+                btn_switch_auto.classList.remove("active");
+                btn_switch_light.classList.add("active");
+                btn_switch_dark.classList.remove("active");
+                break;
+            case "auto":
+                btn_switch_auto.classList.add("active");
+                btn_switch_light.classList.remove("active");
+                btn_switch_dark.classList.remove("active");
                 break;
         }
     }
 
-    function changeThemeDark(save) {
+    function changeThemeDark(save = true) {
         body.classList.add("dark");
-        if (save) localStorage.setItem("theme", "dark")
+        if (save) {
+            switchsetActive("dark");
+            localStorage.setItem("theme", "dark")
+        } else {
+            switchsetActive("auto");
+            setActive("auto", true);
+        }
         setTimeout(() => body.style.transition = "all .3s ease", 800)
         switchDropdown.classList.remove("active");
-        setActive("dark");
+        setActive("dark", save);
     }
 
-    function changeThemeLight(save) {
+    function changeThemeLight(save = true) {
         body.classList.remove("dark");
-        if (save) localStorage.setItem("theme", "light")
+        if (save) {
+            switchsetActive("light");
+            localStorage.setItem("theme", "light")
+        } else switchsetActive("auto");
         setTimeout(() => body.style.transition = "all .3s ease", 800);
         switchDropdown.classList.remove("active");
-        setActive("light");
+        setActive("light", save);
     }
 
     function changeThemeAuto() {
         localStorage.removeItem("theme")
         ObserverTheme();
+        switchsetActive("auto")
         switchDropdown.classList.remove("active");
         setActive("auto");
     }
@@ -126,5 +100,6 @@ function ThemeInit() {
     btn_switch_light.addEventListener("click", changeThemeLight);
     btn_switch_dark.addEventListener("click", changeThemeDark);
     btn_switch_auto.addEventListener("click", changeThemeAuto);
+    ObserverTheme();
 }
 ThemeInit();

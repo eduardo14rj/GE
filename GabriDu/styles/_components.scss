@@ -176,6 +176,7 @@
             bottom: 100vh;
 
             .overlay {
+                transition: $transition;
                 position: fixed;
                 width: 100%;
                 height: 100vh;
@@ -211,7 +212,10 @@
 
 
             nav {
-                background-color: map-get($colors, primary);
+                background-color: map-get($colors, light);
+                @include apply-dark-style(){
+                    background-color: map-get($colors, dark);
+                }
                 position: absolute;
                 width: 100%;
                 flex-direction: column;
@@ -240,9 +244,3 @@
 
 
 //SECTIONS
-//HOME  
-#Home {
-    p {
-        font-size: 1.32rem !important;
-    }
-}

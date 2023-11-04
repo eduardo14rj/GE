@@ -23,5 +23,4 @@ function toggleMenu() {
         }
     })
 }
-
 toggleMenu();

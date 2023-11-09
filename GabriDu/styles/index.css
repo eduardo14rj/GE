@@ -702,6 +702,10 @@ body.dark .dark\:bg-info-25 {
   width: 100%;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -720,6 +724,14 @@ body.dark .dark\:bg-info-25 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.4rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .col-12 {

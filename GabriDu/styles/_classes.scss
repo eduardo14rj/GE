@@ -60,6 +60,27 @@
   text-align: center;
 }
 
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+
+.obj-cover {
+  object-fit: cover;
+}
+
+
+@include web(){
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -74,6 +95,14 @@
   grid-gap: 12px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.position-relative {
+  position: relative;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -84,6 +113,10 @@
 
 .container {
   @include container();
+}
+
+.position-absolute {
+  position: absolute;
 }
 
 
@@ -141,11 +174,12 @@
 @each $colors-name, $colors-value in $colors {
   @each $opacity-name, $opacity-value in $opacity {
     .ball-#{$colors-name}-#{$opacity-name} {
-      height: 200px;
-      width: 200px;
+      height: 300px;
+      width: 300px;
       border-radius: 100%;
+      z-index: -1;
       background: rgba($colors-value, $opacity-value);
-      filter: blur(64px);
+      filter: blur(72px);
     }
   }
 }

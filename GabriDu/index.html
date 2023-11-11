@@ -62,7 +62,8 @@
     </header>
 
     <main>
-        <section id="Home">
+        <section id="Home" class="vh-100 overflow-hidden position-relative">
+            <div class="ball-primary-100 position-absolute" style="right: -20px; top: 0;"></div>
             <div class="container vh-100">
                 <div class="row vh-100 align-items-center">
                     <div class="col-12 col-md-6 color-dark-100 dark:color-light-100">
@@ -78,21 +79,24 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="img\Frame 1.png" class="w-100" alt="foto qualquer">
+                        <img src="img\Frame 1.png" class="w-100 d-none d-md-block">
+                        <img src="img\Frame 1.png" height="240" class="w-100 d-block d-md-none obj-cover">
                     </div>
                 </div>
             </div>
         </section>
         <section id="Sobre">
+            <h3 class="mb-2 text-center dark:color-light-100 color-secondary-100">GE e sua origem</h3>
             <div class="container">
-                <h3 class="mb-2 text-center dark:color-light-100 color-secondary-100">GE e sua origem</h3>
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="img\arnold-francisca-f77Bh3inUpE-unsplash 1.png" class="w-100">
+                    <div class="col-md-6 col-12">
+                        <div>
+                            <img src="img\arnold-francisca-f77Bh3inUpE-unsplash 1.png" class="w-100" />
+                        </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-12">
                         <div class="row dark:color-light-100 color-dark-100">
-                            <div class="col-md-6 pr-1">
+                            <div class="col-md-6 col-12 pr-1">
                                 <p class="text-justify h-auto">
                                     A GE foi fundada por dois programadores experientes, Eduardo Oliveira e Gabriel
                                     Tavares,
@@ -101,7 +105,7 @@
                                     contínuo.
                                 </p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-12">
                                 <p class="text-justify">
                                     para isso, estamos atualmente concentrados na construção deste portfólio.
                                     Este será um espaço detalhado que descreverá nossas habilidades, experiências e
@@ -136,11 +140,10 @@
                     </span>
                 </div>
 
-
                 <div class="row">
                     <div class="col-md-4 col-12">
                         <div viewModal img-thumb="https://picsum.photos/1200/1200">
-                            <img src="./img/galeria/galeria filme.png" class="w-100" >
+                            <img src="./img/galeria/galeria filme.png" class="w-100">
                         </div>
                     </div>
                     <div class="col-md-4 col-12">
@@ -169,8 +172,8 @@
         <!--<img src="NÃO SEI COMO COLOCAR A LOGO"></footer></div>-->
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./js/index.js"></script>
         <script src="./js/theme.js"></script>
         <script src="./js/scrollNavigation.js"></script>

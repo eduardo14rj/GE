@@ -115,6 +115,10 @@
   @include container();
 }
 
+.radius-20 {
+  border-radius: 20px;
+}
+
 .position-absolute {
   position: absolute;
 }

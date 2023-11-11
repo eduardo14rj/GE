@@ -93,7 +93,7 @@
     background: opacity(primary-light, 50);
     backdrop-filter: blur(5px);
     height: $navbar-height;
-
+    z-index: 8;
     @include apply-dark-style() {
         background: opacity(dark, 50);
     }

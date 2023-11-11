@@ -5,11 +5,32 @@ document.querySelectorAll('a').forEach(anchor => {
         const sectionId = this.getAttribute('href');
         const section = document.querySelector(sectionId);
 
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
+        const offset = 120; // Substitua 50 pelo valor de deslocamento desejado em pixels
+        const duration = 140; // Tempo de animação em milissegundos
+        const targetPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+
+        let start = null;
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+
+            const progress = timestamp - start;
+            const percent = Math.min(progress / duration, 1);
+
+            window.scrollTo({
+                top: window.scrollY + (targetPosition - window.scrollY) * percent,
+                behavior: 'smooth'
+            });
+
+            if (progress < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        requestAnimationFrame(step);
     });
 });
+
 
 // Função para verificar se a seção está visível na tela
 function isElementOnScreen(element) {

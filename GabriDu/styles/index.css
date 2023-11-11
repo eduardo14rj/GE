@@ -90,6 +90,7 @@ a {
   background: #14E3D9;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -150,6 +151,7 @@ body.dark .dark\:bg-primary-25 {
   background: #912BE3;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -210,6 +212,7 @@ body.dark .dark\:bg-secondary-25 {
   background: #0D398C;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -270,6 +273,7 @@ body.dark .dark\:bg-dark-light-25 {
   background: #E6F8FF;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -330,6 +334,7 @@ body.dark .dark\:bg-primary-light-25 {
   background: #FAFBFF;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -390,6 +395,7 @@ body.dark .dark\:bg-light-25 {
   background: #061A40;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -450,6 +456,7 @@ body.dark .dark\:bg-dark-25 {
   background: #4FE887;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -510,6 +517,7 @@ body.dark .dark\:bg-success-25 {
   background: #E35B14;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -570,6 +578,7 @@ body.dark .dark\:bg-danger-25 {
   background: #FFD930;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -630,6 +639,7 @@ body.dark .dark\:bg-warning-25 {
   background: #5AE8DF;
   padding: 10px 20px;
   border-radius: 8px;
+  display: inline-block;
   font-weight: bold;
   color: #061A40;
 }
@@ -702,6 +712,14 @@ body.dark .dark\:bg-info-25 {
   width: 100%;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -738,6 +756,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 12 !important;
 }
 
+.offset-12 {
+  margin-left: 100% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-12 {
     grid-column: span 12 !important;
@@ -745,6 +767,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-11 {
   grid-column: span 11 !important;
+}
+
+.offset-11 {
+  margin-left: 91.6666666667% !important;
 }
 
 @media (min-width: 762px) {
@@ -756,6 +782,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 10 !important;
 }
 
+.offset-10 {
+  margin-left: 83.3333333333% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-10 {
     grid-column: span 10 !important;
@@ -763,6 +793,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-9 {
   grid-column: span 9 !important;
+}
+
+.offset-9 {
+  margin-left: 75% !important;
 }
 
 @media (min-width: 762px) {
@@ -774,6 +808,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 8 !important;
 }
 
+.offset-8 {
+  margin-left: 66.6666666667% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-8 {
     grid-column: span 8 !important;
@@ -781,6 +819,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-7 {
   grid-column: span 7 !important;
+}
+
+.offset-7 {
+  margin-left: 58.3333333333% !important;
 }
 
 @media (min-width: 762px) {
@@ -792,6 +834,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 6 !important;
 }
 
+.offset-6 {
+  margin-left: 50% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-6 {
     grid-column: span 6 !important;
@@ -799,6 +845,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-5 {
   grid-column: span 5 !important;
+}
+
+.offset-5 {
+  margin-left: 41.6666666667% !important;
 }
 
 @media (min-width: 762px) {
@@ -810,6 +860,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 4 !important;
 }
 
+.offset-4 {
+  margin-left: 33.3333333333% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-4 {
     grid-column: span 4 !important;
@@ -817,6 +871,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-3 {
   grid-column: span 3 !important;
+}
+
+.offset-3 {
+  margin-left: 25% !important;
 }
 
 @media (min-width: 762px) {
@@ -828,6 +886,10 @@ body.dark .dark\:bg-info-25 {
   grid-column: span 2 !important;
 }
 
+.offset-2 {
+  margin-left: 16.6666666667% !important;
+}
+
 @media (min-width: 762px) {
   .col-md-2 {
     grid-column: span 2 !important;
@@ -835,6 +897,10 @@ body.dark .dark\:bg-info-25 {
 }
 .col-1 {
   grid-column: span 1 !important;
+}
+
+.offset-1 {
+  margin-left: 8.3333333333% !important;
 }
 
 @media (min-width: 762px) {
@@ -1484,4 +1550,4 @@ body.dark #navbar .container nav ul li a {
   #navbar .container nav ul li a {
     text-align: center;
   }
-}/*# sourceMappingURL=index.css.map */
+}

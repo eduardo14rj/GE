@@ -7,14 +7,16 @@
     background: $color-value;
     padding: 10px 20px;
     border-radius: 8px;
+    display: inline-block;
     font-weight: bold;
     color: map-get($colors, dark);
+
     &.big {
       padding: 16px 32px;
       font-size: 1.24rem;
     }
   }
-  
+
   @each $opacity-value, $opacity-level in $opacity {
     .color-#{$color-name}-#{$opacity-value} {
       color: rgba($color-value, $opacity-level);
@@ -54,6 +56,14 @@
   width: 100%;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -88,6 +98,10 @@
 @each $cols-value in $cols {
   .col-#{$cols-value} {
     grid-column: span $cols-value !important;
+  }
+
+  .offset-#{$cols-value} {
+    margin-left: (100% / $max-columns) * $cols-value !important;
   }
 
   @include web() {

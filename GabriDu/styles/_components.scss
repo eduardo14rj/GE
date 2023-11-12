@@ -94,6 +94,7 @@
     backdrop-filter: blur(5px);
     height: $navbar-height;
     z-index: 8;
+
     @include apply-dark-style() {
         background: opacity(dark, 50);
     }
@@ -147,6 +148,10 @@
                         }
 
                         text-decoration: none;
+
+                        &.active {
+                            color: map-get($colors, primary) !important;
+                        }
 
                         &:hover {
                             color: map-get($colors, primary) !important;
@@ -213,9 +218,11 @@
 
             nav {
                 background-color: map-get($colors, light);
-                @include apply-dark-style(){
+
+                @include apply-dark-style() {
                     background-color: map-get($colors, dark);
                 }
+
                 position: absolute;
                 width: 100%;
                 flex-direction: column;

@@ -802,6 +802,11 @@ body.dark .dark\:bg-info-25 {
   border-radius: 20px;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .position-absolute {
   position: absolute;
 }
@@ -812,6 +817,13 @@ body.dark .dark\:bg-info-25 {
 
 .align-items-center {
   align-items: center;
+}
+
+.Inline {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
 }
 
 .col-12 {

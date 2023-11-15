@@ -74,7 +74,7 @@
                         <p class="pt-1 pb-1">Buscamos excelência, criatividade e precisão para entregar soluções,
                             priorizando a qualidade em cada linha de código.</p>
                         <div class="mt-2">
-                            <a href="#Galeria"class="btn-primary dark:btn-secondary">
+                            <a href="#Galeria" class="btn-primary dark:btn-secondary">
                                 Veja nossa galeria
                             </a>
                         </div>
@@ -125,7 +125,7 @@
 
             </div>
 
-           
+
         </section>
 
         <section id="Galeria">
@@ -143,16 +143,24 @@
 
                 <div class="row">
                     <div class="col-md-4 col-12">
-                        <div viewModal img-thumb="https://picsum.photos/1200/1200">
-                            <img src="./img/galeria/galeria filme.png" class="w-100">
+                        <div viewModal viewModal-width="80%">
+                            <div viewModal-thumb viewModal-thumb-height="300px">
+                                <img src="./img/galeria/galeria filme.png" class="w-100 object-cover">
+                            </div>
+                            <div viewModal-context style="height: 400px;">
+                                <div class="dark:bg-dark-100 bg-light-100 p-3">
+                                    <p class="dark:color-light-100">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, nihil adipisci
+                                        quas repellendus asperiores reiciendis fugiat praesentium ratione. Suscipit
+                                        similique et molestias perferendis nemo dicta animi ab temporibus, vel
+                                        obcaecati?</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-12">
                     </div>
                 </div>
 
-               <!--ESTE LUGAR E PARA AS SKILLS?-->
-
+                <!--ESTE LUGAR E PARA AS SKILLS?-->
 
                 <!-- <div class="lg-primary-to-secondary color-light-100 p-3" style="border-radius: 32px;">
                     <h6>
@@ -171,34 +179,52 @@
     <div></div>
     <footer style="background-color:#0e2451;max-height: 300px;clear: both;padding: 20px 0;margin-top: 332px;">
         <div class=""></div>
-            <div class="row dark:color-light-100 color-dark-100">
-                <div class="col-md-6 col-12 pr-1">
-                    <p class="text-justify h-auto">
-                        <h4>Navegação</h4><BR><div>
-                        <a href="#Home"><div class="dark:color-light-100 color-dark-100">Pricipal</div></a><BR>
-                        <a href="#Sobre"><div class="dark:color-light-100 color-dark-100">Sobre a GE</div></a><BR>
-                        <a href="#Skills"><div class="dark:color-light-100 color-dark-100">Skills</div></a><BR>
-                        <a href="#Galeria"><div class="dark:color-light-100 color-dark-100">Galeria</div></a></div>
-                    </p>
+        <div class="row dark:color-light-100 color-dark-100">
+            <div class="col-md-6 col-12 pr-1">
+                <p class="text-justify h-auto">
+                <h4>Navegação</h4><BR>
+                <div>
+                    <a href="#Home">
+                        <div class="dark:color-light-100 color-dark-100">Pricipal</div>
+                    </a><BR>
+                    <a href="#Sobre">
+                        <div class="dark:color-light-100 color-dark-100">Sobre a GE</div>
+                    </a><BR>
+                    <a href="#Skills">
+                        <div class="dark:color-light-100 color-dark-100">Skills</div>
+                    </a><BR>
+                    <a href="#Galeria">
+                        <div class="dark:color-light-100 color-dark-100">Galeria</div>
+                    </a>
                 </div>
-                <div class="col-md-6 col-12">
-                    <p class="text-justify">
-                        Agradecemos pela sua visualização de nosso portfólio.
-                    </p>
-                    
-                </div>
-            </div><div style="text-align: center;"class="dark:color-light-100 color-dark-100">GE 2023&copy;-Todos os direitos reservados.</div>
-    <div style="float: inline-end;float: right;"class="row"><div><img src=""></div><div><img src="">
-    </div><div><img src=""></div></div></footer></div>
-    
-        </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-            integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./js/index.js"></script>
-        <script src="./js/theme.js"></script>
-        <script src="./js/scrollNavigation.js"></script>
-        <script src="./js/ViewModal.js"></script>
+                </p>
+            </div>
+            <div class="col-md-6 col-12">
+                <p class="text-justify">
+                    Agradecemos pela sua visualização de nosso portfólio.
+                </p>
+
+            </div>
+        </div>
+        <div style="text-align: center;" class="dark:color-light-100 color-dark-100">GE 2023&copy;-Todos os direitos
+            reservados.</div>
+        <div style="float: inline-end;float: right;" class="row">
+            <div><img src=""></div>
+            <div><img src="">
+            </div>
+            <div><img src=""></div>
+        </div>
+    </footer>
+    </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/scrollNavigation.js"></script>
+    <script src="./js/ViewModal.js"></script>
 </body>
 
 </html>

@@ -51,6 +51,9 @@
 .vh-100 {
   height: 100vh;
 }
+.h-100 {
+  height: 100%;
+}
 
 .w-100 {
   width: 100%;
@@ -115,8 +118,16 @@
   @include container();
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .radius-20 {
   border-radius: 20px;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .object-cover {

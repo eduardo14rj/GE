@@ -18,9 +18,11 @@ body {
   font-size: 16px;
   background: #E6F8FF;
   overflow: overlay;
+  color: #061A40;
 }
 body.dark {
   background: #061A40;
+  color: #FAFBFF;
 }
 
 h1,
@@ -733,6 +735,10 @@ body.dark .dark\:bg-info-25 {
   height: 100vh;
 }
 
+.h-100 {
+  height: 100%;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -798,8 +804,16 @@ body.dark .dark\:bg-info-25 {
   padding: 0 1.4rem;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .radius-20 {
   border-radius: 20px;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .object-cover {

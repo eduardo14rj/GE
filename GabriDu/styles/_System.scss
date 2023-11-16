@@ -23,9 +23,11 @@ body {
     font-size: 16px;
     background: map-get($colors, primary-light);
     overflow: overlay;
+    color: map-get($colors, dark);
 
     @include apply-dark-style(true) {
         background: map-get($colors, dark);
+        color: map-get($colors, light);
     }
 }
 

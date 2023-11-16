@@ -10,7 +10,6 @@ function ModalThumb(viewModal) {
     function open() {
         viewModalThumb.style.transition = "all .5s ease";
         viewModalThumbImage.style.transition = "all .5s ease";
-
         viewModalThumb.style.height = viewModalThumb.getAttribute("viewModal-thumb-height");
         viewModalThumbImage.style.height = viewModalThumb.getAttribute("viewModal-thumb-height");
     }
@@ -27,15 +26,16 @@ function ModalContext(viewModal) {
     var viewModalContext = viewModal.querySelector("div[viewModal-context]");
 
     function open() {
-        viewModalContext.style.transition = "all .5s ease";
+        viewModalContext.style.transition = "all .5s";
         viewModalContext.style.height = "auto";
     }
 
     function close(instant) {
-        if(!instant) {
+        if (!instant) {
             viewModalContext.style.transition = "all .5s ease";
         }
         viewModalContext.style.height = '0px';
+        viewModalContext.style.overflow = "hidden";
     }
     return { open, close }
 }
@@ -65,6 +65,7 @@ function openModal(viewModal, index) {
     override.style.width = "100%";
     override.style.height = "100vh";
     override.style.left = "0px";
+    override.style.cursor = "pointer";
     override.style.top = "0px";
     override.style.backdropFilter = "blur(6px)"
     override.style.background = "#00000040";

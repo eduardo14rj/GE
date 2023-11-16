@@ -255,3 +255,19 @@
 #Galeria {
     margin-top: 160px;
 }
+footer{
+    .logo {
+        border: none !important;
+        background-image: url('./../img/logo light.svg');
+
+        @include apply-dark-style() {
+            background-image: url('./../img/logo dark.svg');
+        }
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 100%;
+        width: 100px;
+        height: 32px;
+    }
+}

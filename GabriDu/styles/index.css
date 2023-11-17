@@ -1526,6 +1526,10 @@ body.dark .dark\:bg-info-25 {
   filter: blur(72px);
 }
 
+.justify-content-arround {
+  justify-content: space-around;
+}
+
 .switch-container {
   position: relative;
   height: 64px;

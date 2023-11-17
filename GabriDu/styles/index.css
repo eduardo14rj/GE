@@ -1734,6 +1734,19 @@ body.dark #navbar .container nav ul li a {
   }
 }
 
+footer .logo {
+  border: none !important;
+  background-image: url("./../img/logo light.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 100%;
+  width: 150px;
+  height: 52px;
+}
+body.dark footer .logo {
+  background-image: url("./../img/logo dark.svg");
+}
+
 #Galeria {
   margin-top: 160px;
-}
+}/*# sourceMappingURL=index.css.map */

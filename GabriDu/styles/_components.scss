@@ -245,16 +245,6 @@
         }
     }
 }
-
-
-
-
-
-//SECTIONS
-
-#Galeria {
-    margin-top: 160px;
-}
 footer{
     .logo {
         border: none !important;
@@ -267,7 +257,16 @@ footer{
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 100%;
-        width: 100px;
-        height: 32px;
+        width: 150px;
+        height: 52px;
     }
+}
+
+
+
+
+//SECTIONS
+
+#Galeria {
+    margin-top: 160px;
 }

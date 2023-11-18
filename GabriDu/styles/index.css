@@ -2016,3 +2016,16 @@ body.dark footer .logo {
 #Galeria {
   margin-top: 160px;
 }
+
+.unisuam {
+  border: none !important;
+  background-image: url("./../img/unisuam dark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 100%;
+  width: 450px;
+  height: 180px;
+}
+body.dark .unisuam {
+  background-image: url("./../img/logo da unisuam.png");
+}/*# sourceMappingURL=index.css.map */

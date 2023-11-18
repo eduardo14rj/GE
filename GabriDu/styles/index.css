@@ -1792,6 +1792,11 @@ body.dark .dark\:bg-info-25 {
   justify-content: space-around;
 }
 
+.container #NIT {
+  background-image: url("./../img/Nome.png");
+  background-repeat: no-repeat;
+}
+
 .switch-container {
   position: relative;
   height: 64px;
@@ -2028,4 +2033,8 @@ body.dark footer .logo {
 }
 body.dark .unisuam {
   background-image: url("./../img/logo da unisuam.png");
+}
+
+.container .input {
+  background-image: url("./../img/Nome.png");
 }/*# sourceMappingURL=index.css.map */

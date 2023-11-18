@@ -44,14 +44,15 @@ function isElementOnScreen(element) {
 }
 
 function handleScroll(){
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a');
-
+    console.log({"sections": sections});
     sections.forEach((section, index) => {
         if (isElementOnScreen(section)) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
+            // console.log({"navlinks": navLinks[index]});
             navLinks[index]?.classList.add('active');
         }
     });

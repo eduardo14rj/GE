@@ -1792,9 +1792,22 @@ body.dark .dark\:bg-info-25 {
   justify-content: space-around;
 }
 
-.container #NIT {
+#NIT {
   background-image: url("./../img/Nome.png");
   background-repeat: no-repeat;
+  background-position: center right;
+}
+
+#EIT {
+  background-image: url("./../img/email.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+#MIT {
+  background-image: url("./../img/mensagem.png");
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .switch-container {

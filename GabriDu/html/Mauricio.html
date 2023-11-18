@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GE</title>
+    
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>GE</title>
+            <link rel="stylesheet" href="./../styles/index.css">
+            <link rel="icon" href="./../favicon.ico">
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        </head>
+    
+    <body>
+        <header id="navbar">
+            <div class="container">
+                <div class="overlay"></div>
+                <nav>
+                    <div class="logo"></div>
+                    <ul>
+                        <li><a href="./../index.html">Voltar</a></li>
+                        <div class="switch-container">
+                            <button class="switch-actived">
+                                <span class="material-symbols-outlined">
+                                    light_mode
+                                </span>
+                            </button>
+                            <div class="switch-dropdown active">
+                                <button class="switch-light">
+                                    Claro
+                                    <span class="material-symbols-outlined">
+                                        light_mode
+                                    </span>
+                                </button>
+                                <button class="switch-dark">
+                                    Escuro
+                                    <span class="material-symbols-outlined">
+                                        dark_mode
+                                    </span>
+                                </button>
+                                <button class="switch-auto">
+                                    Automático
+                                    <span class="material-symbols-outlined">
+                                        tonality
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="navbar-mobile">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </header>
+    
+        <main class="overflow-hidden position-relative min-vh-100">
+            <div class="ball-primary-100 position-absolute" style="right: -20px;"></div>
+            <div class="ball-secondary-50 position-absolute" style="bottom: -20px;"></div>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="./../img/Mauricio.png" style="height: 300px; width: 300px;" alt="Gabreil">
+                        <h2>Mauricio de Mello</h2>
+                        <h5 class="fw-regular mt-2">Matrícula: <b>22206914</b></h5>
+                    </div>
+                    <div class="col-12 col-md-6 mt-5">
+                        <p>
+                            Meu nome é Mauricio, tenho 20 anos 
+                        </p>
+    
+                        <hr class="mt-2 mb-2 border-color-light-25">
+    
+                        <h5>Skills</h5>
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <img src="../img/skills/html.png" class="w-100" />
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img src="../img/skills/css.png" class="w-100" />
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img src="../img/skills/js.png" class="w-100" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-5">
+                        <h5 class="mb-5">Galeria</h5>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div viewModal viewModal-width="80%">
+                                    <div viewModal-thumb viewModal-thumb-height=" 400px">
+                                        <img style="border-radius: 20px; height: 100px;" src="./../img/galeria/telecall.png" class="w-100 object-cover">
+                                    </div>
+                                    <div viewModal-context>
+                                        <div class="dark:bg-dark-100 bg-light-100 p-3">
+                                            <h4 class="text-nowrap mb-2">Organização e disponibilização do site na web</h4>
+                                            <p class="dark:color-light-100">
+                                                No ano passado tivemos que organizar as partes do projeto que nos entregaram
+                                                e não só isso também tivemos que fazer o site ficar disponivel na web principalmente
+                                                utilizando a "AWS" como meio de divulgação.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div viewModal viewModal-width="80%">
+                                    <div viewModal-thumb viewModal-thumb-height=" 400px">
+                                        <img style="border-radius: 20px; height: 100px;" src="./../img/galeria/Phone-Store_gabriel.png" class="w-100 object-cover">
+                                    </div>
+                                    <div viewModal-context>
+                                        <div class="dark:bg-dark-100 bg-light-100 p-3">
+                                            <h4 class="text-nowrap mb-2">Desenvolvimento da Phone-Store</h4>
+                                            <p class="dark:color-light-100">
+                                                A familia Guanabara fez um pedido para aconpanhar o tempo e suas mudanças logo pediram para
+                                        nos desenvolvermos um site para a sua loja com produtos tecnologicos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div> 
+        </main>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+            integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./../js/index.js"></script>
+        <script src="./../js/theme.js"></script>
+        <script src="./../js/scrollNavigation.js"></script>
+        <script src="./../js/ViewModal.js"></script>
+    </body>
+    
+    </html> 

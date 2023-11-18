@@ -17,7 +17,6 @@ body {
 body {
   font-size: 16px;
   background: #E6F8FF;
-  overflow: overlay;
   color: #061A40;
 }
 body.dark {
@@ -1087,6 +1086,14 @@ body.dark .dark\:bg-info-25 {
   position: absolute;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .d-flex {
   display: flex;
 }
@@ -1119,6 +1126,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-12 {
+    margin-left: calc(100% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-11 {
   grid-column: span 11 !important;
@@ -1136,6 +1147,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 11 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-11 {
+    margin-left: calc(91.6666666667% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .col-10 {
@@ -1155,6 +1170,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-10 {
+    margin-left: calc(83.3333333333% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-9 {
   grid-column: span 9 !important;
@@ -1172,6 +1191,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 9 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-9 {
+    margin-left: calc(75% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .col-8 {
@@ -1191,6 +1214,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-8 {
+    margin-left: calc(66.6666666667% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-7 {
   grid-column: span 7 !important;
@@ -1208,6 +1235,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 7 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-7 {
+    margin-left: calc(58.3333333333% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .col-6 {
@@ -1227,6 +1258,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-6 {
+    margin-left: calc(50% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-5 {
   grid-column: span 5 !important;
@@ -1244,6 +1279,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 5 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-5 {
+    margin-left: calc(41.6666666667% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .col-4 {
@@ -1263,6 +1302,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-4 {
+    margin-left: calc(33.3333333333% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-3 {
   grid-column: span 3 !important;
@@ -1280,6 +1323,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 3 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-3 {
+    margin-left: calc(25% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .col-2 {
@@ -1299,6 +1346,10 @@ body.dark .dark\:bg-info-25 {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .offset-md-2 {
+    margin-left: calc(16.6666666667% + 12px) !important;
+    padding-right: 12px;
+  }
 }
 .col-1 {
   grid-column: span 1 !important;
@@ -1316,6 +1367,10 @@ body.dark .dark\:bg-info-25 {
     grid-column: span 1 !important;
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .offset-md-1 {
+    margin-left: calc(8.3333333333% + 12px) !important;
+    padding-right: 12px;
   }
 }
 .m-1 {
@@ -2035,6 +2090,26 @@ body.dark footer .logo {
   margin-top: 160px;
 }
 
+.skill-progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 0 99px 99px 0;
+}
+.skill-progress::-webkit-progress-bar {
+  background-color: rgba(6, 26, 64, 0.25);
+  border-radius: 0 99px 99px 0;
+}
+body.dark .skill-progress::-webkit-progress-bar {
+  background-color: rgba(20, 227, 217, 0.25);
+}
+.skill-progress::-webkit-progress-value {
+  background-color: #061A40;
+  border-radius: 0 99px 99px 0;
+}
+body.dark .skill-progress::-webkit-progress-value {
+  background-color: #14E3D9;
+}
+
 .unisuam {
   border: none !important;
   background-image: url("./../img/unisuam dark.png");
@@ -2046,4 +2121,4 @@ body.dark footer .logo {
 }
 body.dark .unisuam {
   background-image: url("./../img/logo da unisuam.png");
-}/*# sourceMappingURL=index.css.map */
+}

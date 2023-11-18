@@ -272,6 +272,29 @@ footer {
     margin-top: 160px;
 }
 
+.skill-progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 0 99px 99px 0;
+
+    &::-webkit-progress-bar {
+        @include apply-dark-style(){
+            background-color: opacity(primary, 25);
+        }
+        background-color: opacity(dark, 25);
+        border-radius: 0 99px 99px 0;
+
+    }
+
+    &::-webkit-progress-value {
+        @include apply-dark-style(){
+            background-color: map-get($colors, primary);
+        }
+        background-color: map-get($colors, dark);
+        border-radius: 0 99px 99px 0;
+    }
+}
+
 .unisuam {
     border: none !important;
     background-image: url('./../img/unisuam dark.png');

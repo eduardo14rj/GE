@@ -1117,6 +1117,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-12 {
   margin-left: calc(100% + 12px) !important;
+  margin-right: calc(100% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1139,6 +1140,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-11 {
   margin-left: calc(91.6666666667% + 12px) !important;
+  margin-right: calc(91.6666666667% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1161,6 +1163,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-10 {
   margin-left: calc(83.3333333333% + 12px) !important;
+  margin-right: calc(83.3333333333% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1183,6 +1186,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-9 {
   margin-left: calc(75% + 12px) !important;
+  margin-right: calc(75% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1205,6 +1209,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-8 {
   margin-left: calc(66.6666666667% + 12px) !important;
+  margin-right: calc(66.6666666667% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1227,6 +1232,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-7 {
   margin-left: calc(58.3333333333% + 12px) !important;
+  margin-right: calc(58.3333333333% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1249,6 +1255,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-6 {
   margin-left: calc(50% + 12px) !important;
+  margin-right: calc(50% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1271,6 +1278,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-5 {
   margin-left: calc(41.6666666667% + 12px) !important;
+  margin-right: calc(41.6666666667% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1293,6 +1301,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-4 {
   margin-left: calc(33.3333333333% + 12px) !important;
+  margin-right: calc(33.3333333333% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1315,6 +1324,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-3 {
   margin-left: calc(25% + 12px) !important;
+  margin-right: calc(25% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1337,6 +1347,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-2 {
   margin-left: calc(16.6666666667% + 12px) !important;
+  margin-right: calc(16.6666666667% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1359,6 +1370,7 @@ body.dark .dark\:bg-info-25 {
 
 .offset-1 {
   margin-left: calc(8.3333333333% + 12px) !important;
+  margin-right: calc(8.3333333333% + 12px) !important;
   padding-right: 12px;
 }
 
@@ -1859,24 +1871,47 @@ body.dark .dark\:bg-info-25 {
   justify-content: end;
 }
 
-#NIT {
-  background-image: url("./../img/Nome.png");
-  background-repeat: no-repeat;
-  background-position: center right;
+.input-container {
+  display: flex;
+  position: relative;
+}
+.input-container textarea {
+  resize: none;
+}
+.input-container input, .input-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: solid 1px #061A40;
+  background: #FAFBFF;
+  color: #061A40;
+  padding-right: 42px;
+}
+body.dark .input-container input, body.dark .input-container textarea {
+  border: solid 1px #FAFBFF;
+  background: #061A40;
+  color: #FAFBFF;
+}
+.input-container .input-icon {
+  position: absolute;
+  right: 12px;
+  top: 8px;
 }
 
-#EIT {
-  background-image: url("./../img/email.png");
-  background-repeat: no-repeat;
-  background-position: center right;
+.animation-scroll-top {
+  animation: fadeTop both 1.2s;
 }
 
-#MIT {
-  background-image: url("./../img/mensagem.png");
-  background-repeat: no-repeat;
-  background-position: top right;
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 .switch-container {
   position: relative;
   height: 64px;
@@ -2133,4 +2168,27 @@ body.dark .skill-progress::-webkit-progress-value {
 }
 body.dark .unisuam {
   background-image: url("./../img/logo da unisuam.png");
+}
+
+#Contact .formContainer {
+  position: relative;
+  display: flex;
+  gap: 42px;
+}
+#Contact .formContainer .formContact {
+  width: 75%;
+}
+@media screen and (max-width: 762px) {
+  #Contact .formContainer .formContact {
+    width: 100% !important;
+  }
+}
+#Contact .formContainer .formImage {
+  width: 25%;
+}
+@media screen and (max-width: 762px) {
+  #Contact .formContainer .formImage {
+    width: 100% !important;
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

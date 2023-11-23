@@ -278,18 +278,20 @@ footer {
     border-radius: 0 99px 99px 0;
 
     &::-webkit-progress-bar {
-        @include apply-dark-style(){
+        @include apply-dark-style() {
             background-color: opacity(primary, 25);
         }
+
         background-color: opacity(dark, 25);
         border-radius: 0 99px 99px 0;
 
     }
 
     &::-webkit-progress-value {
-        @include apply-dark-style(){
+        @include apply-dark-style() {
             background-color: map-get($colors, primary);
         }
+
         background-color: map-get($colors, dark);
         border-radius: 0 99px 99px 0;
     }
@@ -310,4 +312,29 @@ footer {
     height: 80px;
 }
 
-  
+
+
+
+#Contact {
+
+    .formContainer {
+        position: relative;
+        display: flex;
+        gap: 42px;
+
+        .formContact {
+            width: 75%;
+            @include mobile() {
+                width: 100% !important;
+            }
+        }
+
+        .formImage {
+            width: 25%;
+            @include mobile() {
+                width: 100% !important;
+                display: none;
+            }
+        }
+    }
+}

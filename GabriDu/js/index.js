@@ -33,3 +33,19 @@ function toggleMenu() {
     })
 }
 toggleMenu();
+
+
+
+//Envio de email: Tela de contato
+function enviarMensagem() {
+    var form = document.getElementById("contactForm");
+    var name = form.querySelector("input[name='Nome']");
+    var email = form.querySelector("input[name='Email']");
+    var message = form.querySelector("textarea[name='Mensagem']");
+    const structure = `
+    Nome da pessoa: ${name.value},
+    Email: ${email.value},
+    Mensagem: ${message.value}
+    `;
+    window.open(`mailto:eduardolimaoliveira@souunisuam.com.br?subject=Message&body=${structure}`);
+}

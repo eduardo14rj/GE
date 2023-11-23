@@ -1,7 +1,8 @@
 @import './config';
 @import './utils';
 
-@each $color-name, $color-value in $colors {
+@each $color-name,
+$color-value in $colors {
 
   .btn-#{$color-name} {
     background: $color-value;
@@ -17,7 +18,8 @@
     }
   }
 
-  @each $opacity-value, $opacity-level in $opacity {
+  @each $opacity-value,
+  $opacity-level in $opacity {
     .color-#{$color-name}-#{$opacity-value} {
       color: rgba($color-value, $opacity-level);
     }
@@ -31,7 +33,7 @@
     }
 
     .dark\:border-color-#{$color-name}-#{$opacity-value} {
-      @include apply-dark-style(){
+      @include apply-dark-style() {
         border-color: rgba($color-value, $opacity-level);
       }
     }
@@ -178,6 +180,7 @@
 .overflow-y-auto {
   overflow-y: auto;
 }
+
 .overflow-y-scroll {
   overflow-y: scroll;
 }
@@ -206,6 +209,7 @@
 
   .offset-#{$cols-value} {
     margin-left: calc(100% / $max-columns * $cols-value + 12px) !important;
+    margin-right: calc(100% / $max-columns * $cols-value + 12px) !important;
     padding-right: 12px;
   }
 
@@ -224,7 +228,8 @@
 }
 
 
-@each $space-name, $space-value in $spacing {
+@each $space-name,
+$space-value in $spacing {
   .m-#{$space-name} {
     margin: $space-value;
   }
@@ -233,7 +238,8 @@
     padding: $space-value;
   }
 
-  @each $position-name, $position-value in $positions {
+  @each $position-name,
+  $position-value in $positions {
     .p#{$position-value}-#{$space-name} {
       padding-#{$position-name}: $space-value;
     }
@@ -245,8 +251,11 @@
 }
 
 
-@each $colors-name, $colors-value in $colors {
-  @each $opacity-name, $opacity-value in $opacity {
+@each $colors-name,
+$colors-value in $colors {
+
+  @each $opacity-name,
+  $opacity-value in $opacity {
     .ball-#{$colors-name}-#{$opacity-name} {
       height: 300px;
       width: 300px;
@@ -274,19 +283,71 @@
   justify-content: end;
 }
 
-#NIT{
-  background-image: url("./../img/Nome.png");
-  background-repeat: no-repeat;
-  background-position: center right;
-} 
-#EIT{
-  background-image: url("./../img/email.png");
-  background-repeat: no-repeat;
-  background-position: center right;
-}
-#MIT{
-  background-image: url("./../img/mensagem.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-} 
+// #NIT{
+//   background-image: url("./../img/Nome.png");
+//   background-repeat: no-repeat;
+//   background-position: center right;
+// } 
+// #EIT{
+//   background-image: url("./../img/email.png");
+//   background-repeat: no-repeat;
+//   background-position: center right;
+// }
+// #MIT{
+//   background-image: url("./../img/mensagem.png");
+//   background-repeat: no-repeat;
+//   background-position: top right;
+// } 
 
+
+.input-container {
+  display: flex;
+  position: relative;
+  
+  textarea {
+    resize: none;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: solid 1px map-get($colors, dark);
+    background: map-get($colors, light);
+    color: map-get($colors, dark);
+    padding-right: 42px;
+
+    @include apply-dark-style() {
+      border: solid 1px map-get($colors, light);
+      background: map-get($colors, dark);
+      color: map-get($colors, light);
+    }
+  }
+
+  .input-icon {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+  }
+
+}
+
+
+
+
+.animation-scroll-top {
+  animation: fadeTop both 1.2s;
+  // animation-timeline: view(inline);
+  // animation-range: entry 50% cover 50%;
+}
+
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

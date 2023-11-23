@@ -67,7 +67,7 @@
             <div class="ball-secondary-50 position-absolute" style="left: -20px; bottom:40px;"></div>
             <div class="container vh-100">
                 <div class="row vh-100 align-items-center">
-                    <div class="col-12 col-md-6 color-dark-100 dark:color-light-100">
+                    <div class="col-12 col-md-6 color-dark-100 dark:color-light-100 animation-scroll-top">
                         <label class="text-upper fw-bold dark:color-primary-100 color-secondary-100">
                             Tela principal</label>
                         <h1>Programação com Qualidade</h1>
@@ -86,11 +86,11 @@
                 </div>
             </div>
         </section>
-        <section id="Sobre">
+        <section id="Sobre"  class="animation-scroll-top-not">
             <h3 class="mb-4 text-center dark:color-light-100 color-dark-100">GE e sua origem</h3>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-6 col-12 animation-scroll-top">
                         <div>
                             <img src="img/arnold-francisca-f77Bh3inUpE-unsplash 1.png" class="w-100" />
                         </div>
@@ -98,7 +98,7 @@
                     <div class="col-md-6 col-12">
                         <div class="row dark:color-light-100 color-dark-100">
                             <div class="col-md-6 col-12 pr-1">
-                                <p class="text-justify h-auto">
+                                <p class="text-justify h-auto animated-section">
                                     A GE foi fundada por dois programadores experientes, Eduardo Oliveira e Gabriel
                                     Tavares,
                                     com o propósito de promover e ampliar a equipe de desenvolvimento.
@@ -126,7 +126,7 @@
             <br><br>
         </section>
 
-        <section id="Skills">
+        <section id="Skills" class="animation-scroll-top-not">
             <div style="padding-top: 120px; position: relative;">
                 <div class="ball-secondary-50 position-absolute" style="right: 0; bottom: -80px;"></div>
                 <div class="container">
@@ -215,7 +215,7 @@
                 </div>
             </div>
         </section>
-        <section id="Galeria">
+        <section id="Galeria"  class="animation-scroll-top-not">
             <div class="container">
                 <div class="d-flex align-items-center pb-2 justify-content-center color-dark-100 dark:color-light-100"
                     style="gap: 12px;">
@@ -318,21 +318,59 @@
 
         </div>
 
-        <div style="padding-top: 120px;">
-            <div class="container"><img style="height: 540px;float: right;
-            padding-right: 180px;padding-top: 40px;" src="img/Group 29.png">
-                <h3 style="padding-left: 60px;padding-bottom: 20px;">Entre em contato conosco!</h3>
-                <label style="padding-left: 240px;">Nome</label>
-                <div style="padding-left: 200px;"><input id="NIT" class=" input dark:bg-dark-light-25 bg-light-100"
-                        name="Nome" style="width:550px;height:50px;border-radius: 10px;"></input></div>
-                <label style="padding-left: 240px;">Email</label>
-                <div style="padding-left: 200px;"><input id="EIT" class="input dark:bg-dark-light-25 bg-light-100"
-                        name="Email" style="width:550px;height:50px;border-radius: 10px;"></input></div>
-                <label style="padding-left: 240px;">Mensagem</label>
-                <div style="padding-left: 200px;"><input id="MIT" class="input dark:bg-dark-light-25 bg-light-100"
-                        name="Mensagem" style="width:550px;height:300px;border-radius: 10px;"></input></div>
+        <section style="padding-top: 120px;" id="Contact"  class="animation-scroll-top-not">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="formContainer">
+                            <div class="formContact">
+                                <h3 class="mb-3">Entre em contato conosco!</h3>
+                                <div class="d-flex flex-col" id="contactForm" style="gap: 12px;">
+                                    <label for="Nome">Nome</label>
+                                    <div class="input-container">
+                                        <input type="text" name="Nome" />
+                                        <div class="input-icon">
+                                            <span class="material-symbols-outlined">
+                                                person
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <label for="Email">Email</label>
+                                    <div class="input-container">
+                                        <input type="text" name="Email" />
+                                        <div class="input-icon">
+                                            <span class="material-symbols-outlined">
+                                                email
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <label for="Mensagem">Mensagem</label>
+                                    <div class="input-container">
+                                        <textarea type="text" rows="12" name="Mensagem"></textarea>
+                                        <div class="input-icon">
+                                            <span class="material-symbols-outlined">
+                                                message
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button onclick="enviarMensagem()" class="btn-primary">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formImage">
+                                <img src="./img/Group 29.png" class="w-100" alt="Contate-nos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         <div class="container mb-3" style="margin-top: 180px;">
             <div class="row">
                 <div class="col-12 col-md-8">
@@ -360,9 +398,6 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="logo"></div>
-                    <!-- <div class="row dark:color-light-100 color-dark-100">
-                       
-                    </div> -->
                 </div>
                 <div class="col-md-4 col-12">
                     <div>
@@ -400,6 +435,7 @@
     </footer>
     </div>
     </main>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
         integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

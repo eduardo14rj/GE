@@ -189,7 +189,7 @@
                 backdrop-filter: blur(6px);
             }
 
-            &.active {
+            &.act {
                 bottom: unset !important;
                 background: #00000030;
             }
@@ -313,6 +313,10 @@ footer {
 }
 
 
+
+.section-space{
+    padding: 120px 0;
+}
 
 
 #Contact {

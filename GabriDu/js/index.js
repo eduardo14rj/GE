@@ -8,26 +8,26 @@ function toggleMenu() {
 
     links.forEach(e => {
         e.addEventListener("click", () => {
-            if (navbar.classList.contains("active")) {
-                navbar.classList.remove("active")
+            if (navbar.classList.contains("act")) {
+                navbar.classList.remove("act")
                 toggleIcon();
             }
         })
     })
     function toggleIcon() {
-        if (navbar.classList.contains("active"))
+        if (navbar.classList.contains("act"))
             btnMobile_span.textContent = "close";
         else
             btnMobile_span.textContent = "menu";
     }
 
     btnMobile.addEventListener("click", () => {
-        navbar.classList.toggle("active");
+        navbar.classList.toggle("act");
         toggleIcon();
     });
     overlay.addEventListener("click", () => {
-        if (navbar.classList.contains("active")) {
-            navbar.classList.remove("active")
+        if (navbar.classList.contains("act")) {
+            navbar.classList.remove("act")
             toggleIcon();
         }
     })

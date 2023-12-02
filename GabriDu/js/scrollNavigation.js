@@ -32,31 +32,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Função para verificar se a seção está visível na tela
-function isElementOnScreen(element) {
-    const bounding = element.getBoundingClientRect();
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+// // Função para verificar se a seção está visível na tela
 
-function handleScroll(){
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a');
-    sections.forEach((section, index) => {
-        if (isElementOnScreen(section)) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            navLinks[index]?.classList.add('active');
-        }
+(function() {
+    'use strict';
+  
+    var section = document.querySelectorAll("section[id]");
+    var sections = {};
+    var i = 0;
+  
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
     });
-}
-
-// Ativar o item do menu quando a seção correspondente estiver visível
-window.addEventListener('DOMContentLoaded', handleScroll);
-window.addEventListener('scroll', handleScroll);
-
+  
+    window.onscroll = function() {
+      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  
+      for (i in sections) {
+        if (sections[i] <= scrollPosition + 121) {
+          document.querySelector('.active').setAttribute('class', ' ');
+          document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
+        }
+      }
+    };
+  })();

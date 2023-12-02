@@ -2074,7 +2074,7 @@ body.dark #navbar .container nav ul li a {
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
   }
-  #navbar .container.active {
+  #navbar .container.act {
     bottom: unset !important;
     background: rgba(0, 0, 0, 0.1882352941);
   }
@@ -2170,6 +2170,10 @@ body.dark .unisuam {
   background-image: url("./../img/logo da unisuam.png");
 }
 
+.section-space {
+  padding: 120px 0;
+}
+
 #Contact .formContainer {
   position: relative;
   display: flex;
@@ -2191,4 +2195,4 @@ body.dark .unisuam {
     width: 100% !important;
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
+}

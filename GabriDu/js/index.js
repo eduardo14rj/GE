@@ -49,3 +49,5 @@ function enviarMensagem() {
     `;
     window.open(`mailto:eduardolimaoliveira@souunisuam.com.br?subject=Message&body=${structure}`);
 }
+
+  AOS.init();
